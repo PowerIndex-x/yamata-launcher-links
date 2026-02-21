@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Copy, Check, Eye, ExternalLink } from "lucide-react";
 import { formatNumber } from "@/lib/utils";
+import { PlatformChips } from "./platform-chips";
 
 interface SourceCardProps {
   title: string;
@@ -57,13 +58,7 @@ export function SourceCard({ title, description, link, platforms, detailsUrl, is
           )}
         </CardDescription>
         {platforms && platforms.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mt-3">
-            {platforms.slice(0, 6).map((platform) => (
-              <Badge key={platform} variant="secondary" className="text-xs bg-muted text-muted-foreground hover:bg-muted/80">
-                {platform}
-              </Badge>
-            ))}
-          </div>
+          <PlatformChips platforms={platforms}  maxVisible={6} />
         )}
       </CardHeader>
       <CardContent className="flex gap-2 mt-auto">
