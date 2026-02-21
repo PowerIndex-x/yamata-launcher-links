@@ -10,6 +10,7 @@ const OUTPUT_CACHES_DIR = path.join(OUTPUT_DIR, "caches");
 const CATALOG_PATH = path.join(INPUT_DIR, "catalog-sources.json");
 const DOWNLOAD_PATH = path.join(INPUT_DIR, "download-sources.json");
 
+
 async function readJson(filePath: string): Promise<Source[]> {
   const content = await readFile(filePath, "utf-8");
   const type: SourceType = filePath.includes("catalog") ? SourceType.Catalog : SourceType.Download
@@ -45,7 +46,19 @@ const parseSourceRawData = (type: SourceType, url: string, sourceRawData: any): 
 
 async function fetchSourceData(source: Source): Promise<Source> {
   try {
-    const res = await fetch(source.url);
+    const res = await fetch(source.url, {
+      keepalive: true,
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Accept":
+          "application/json,text/plain,text/html;q=0.9,*/*;q=0.8",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive",
+      },
+      cache: "no-store",
+      signal: AbortSignal.timeout(10000),
+      referrerPolicy: "no-referrer",
+    });
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);

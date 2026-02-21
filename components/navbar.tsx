@@ -67,7 +67,7 @@ export function Navbar() {
               className="gap-2 hover:bg-primary  hover:border-primary"
             >
               <a
-                href="https://github.com/Gr3gorywolf/Yamata-launcher/pulls"
+                href="https://github.com/PowerIndex-x/yamata-launcher-links?tab=readme-ov-file#how-to-contribute"
                 target="_blank"
                 rel="noopener noreferrer"
               >
