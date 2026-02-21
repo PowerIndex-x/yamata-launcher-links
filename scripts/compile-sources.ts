@@ -9,6 +9,47 @@ const OUTPUT_DIR = path.join(process.cwd(), "compiled-sources");
 const OUTPUT_CACHES_DIR = path.join(OUTPUT_DIR, "caches");
 const CATALOG_PATH = path.join(INPUT_DIR, "catalog-sources.json");
 const DOWNLOAD_PATH = path.join(INPUT_DIR, "download-sources.json");
+export async function fetchWithRetry(url: string, retries = 3, timeout = 10000) {
+  let lastError
+
+  for (let i = 0; i < retries; i++) {
+    try {
+      const res = await fetch(url, {
+        method: "GET",
+        redirect: "follow",
+        cache: "no-store",
+        signal: AbortSignal.timeout(timeout),
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+          "Accept": "application/json,text/plain,*/*",
+          "Accept-Encoding": "gzip, deflate",
+          "Connection": "close",
+        },
+      })
+
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`)
+      }
+
+      return res
+    } catch (err: any) {
+      lastError = err
+
+      if (
+        err.code === "ECONNRESET" ||
+        err.code === "ETIMEDOUT" ||
+        err.name === "AbortError"
+      ) {
+        await new Promise((r) => setTimeout(r, 1000 * (i + 1)))
+        continue
+      }
+
+      throw err
+    }
+  }
+
+  throw lastError
+}
 
 
 async function readJson(filePath: string): Promise<Source[]> {
@@ -16,6 +57,7 @@ async function readJson(filePath: string): Promise<Source[]> {
   const type: SourceType = filePath.includes("catalog") ? SourceType.Catalog : SourceType.Download
   return JSON.parse(content).map((source: any) => ({ ...source, type })) as Source[];
 }
+
 
 const parseSourceRawData = (type: SourceType, url: string, sourceRawData: any): Source => {
   const platforms = type === SourceType.Catalog ? [sourceRawData.console.slug] : sourceRawData.downloads.map((d: any) => d.console);
@@ -46,19 +88,7 @@ const parseSourceRawData = (type: SourceType, url: string, sourceRawData: any): 
 
 async function fetchSourceData(source: Source): Promise<Source> {
   try {
-    const res = await fetch(source.url, {
-      keepalive: true,
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-        "Accept":
-          "application/json,text/plain,text/html;q=0.9,*/*;q=0.8",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-      },
-      cache: "no-store",
-      signal: AbortSignal.timeout(10000),
-      referrerPolicy: "no-referrer",
-    });
+    const res = await fetchWithRetry(source.url,4);
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
