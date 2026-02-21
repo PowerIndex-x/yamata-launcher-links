@@ -38,7 +38,8 @@ export async function fetchWithRetry(url: string, retries = 3, timeout = 10000) 
       if (
         err.code === "ECONNRESET" ||
         err.code === "ETIMEDOUT" ||
-        err.name === "AbortError"
+        err.name === "AbortError" || 
+        err.name === "TimeoutError"
       ) {
         await new Promise((r) => setTimeout(r, 1000 * (i + 1)))
         continue
@@ -88,7 +89,7 @@ const parseSourceRawData = (type: SourceType, url: string, sourceRawData: any): 
 
 async function fetchSourceData(source: Source): Promise<Source> {
   try {
-    const res = await fetchWithRetry(source.url,4);
+    const res = await fetchWithRetry(source.url,4, 30000);
 
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
