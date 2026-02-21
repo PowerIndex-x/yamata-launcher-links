@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: 11 15 16;
+  --foreground: 234 244 237;
+  --card: 30 30 30;
+  --card-foreground: 234 244 237;
+  --popover: 42 42 42;
+  --popover-foreground: 234 244 237;
+  --primary: 102 187 106;
+  --primary-foreground: 0 0 0;
+  --secondary: 39 174 96;
+  --secondary-foreground: 0 0 0;
+  --muted: 30 58 43;
+  --muted-foreground: 159 181 167;
+  --accent: 102 187 106;
+  --accent-foreground: 0 0 0;
+  --destructive: 220 38 38;
+  --destructive-foreground: 250 250 250;
+  --border: 37 41 42;
+  --input: 30 30 30;
+  --ring: 102 187 106;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 11 15 16;
+  --foreground: 234 244 237;
+  --card: 30 30 30;
+  --card-foreground: 234 244 237;
+  --popover: 42 42 42;
+  --popover-foreground: 234 244 237;
+  --primary: 102 187 106;
+  --primary-foreground: 0 0 0;
+  --secondary: 39 174 96;
+  --secondary-foreground: 0 0 0;
+  --muted: 30 58 43;
+  --muted-foreground: 159 181 167;
+  --accent: 102 187 106;
+  --accent-foreground: 0 0 0;
+  --destructive: 220 38 38;
+  --destructive-foreground: 250 250 250;
+  --border: 37 41 42;
+  --input: 30 30 30;
+  --ring: 102 187 106;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-popover: rgb(var(--popover));
+  --color-popover-foreground: rgb(var(--popover-foreground));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-destructive: rgb(var(--destructive));
+  --color-destructive-foreground: rgb(var(--destructive-foreground));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

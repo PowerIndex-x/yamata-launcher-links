@@ -1,0 +1,15 @@
+[
+   {
+    "title":"Nintendo Switch",
+    "description":"Thousands of switch games with metadata and cover images collected from gamesdb.launchbox ",
+    "ref":"https://gamesdb.launchbox-app.com/platforms/games/211-nintendo-switch",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/game-catalogs/switch.json"
+   },
+    {
+    "title":"Nintendo Wii U",
+    "description":"Wii U games with metadata and cover images collected from gamesdb.launchbox ",
+    "ref":"https://gamesdb.launchbox-app.com/platforms/games/34-nintendo-wii-u",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/game-catalogs/wiiu.json"
+   }
+   
+]

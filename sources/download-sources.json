@@ -1,0 +1,23 @@
+[
+   {
+    "title":"1337x - Switch",
+    "description":"1337x switch games torrents",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/1337x.json"
+   },
+   {
+    "title":"Blueroms - Switch",
+    "description":"Bluerom's switch games collection",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/blueroms.json"
+   },
+    {
+    "title":"Myrient",
+    "description":"Erista hosted roms with thousands of games for multiple platforms",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/myrient.json"
+   },
+    {
+    "title":"TopRoms Collection",
+    "ref":"https://github.com/cdahmedeh/TopRoms",
+    "description":"TopRoms torrent rom collection",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/toproms.json"
+   }
+]
