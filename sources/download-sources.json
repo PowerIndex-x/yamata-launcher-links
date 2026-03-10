@@ -19,5 +19,17 @@
     "ref":"https://github.com/cdahmedeh/TopRoms",
     "description":"TopRoms torrent rom collection",
     "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/toproms.json"
+   },
+      {
+    "title":"Romslab",
+    "description":"Romslab switch games collection",
+    "ref":"https://romslab.com/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/romslab.json"
+   },
+   {
+    "title":"NswGame",
+    "description":"Nswgame switch games collection",
+    "ref":"https://nswgame.com/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/nswgame-com.json"
    }
 ]
