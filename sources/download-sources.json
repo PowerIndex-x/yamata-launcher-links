@@ -31,5 +31,17 @@
     "description":"Nswgame switch games collection",
     "ref":"https://nswgame.com/",
     "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/nswgame-com.json"
+   },
+   {
+    "title":"Romspedia",
+    "description":"Thousands of games with direct download for multiple platforms",
+    "ref":"https://romspedia.com/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/romspedia.json"
+   },
+    {
+    "title":"Edge emu",
+    "description":"Thousands of games with direct download for multiple platforms",
+    "ref":"https://edgeemu.net/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/edge-emulation.json"
    }
 ]
