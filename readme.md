@@ -7,6 +7,12 @@ Its purpose is to centralize and share **game catalog** and **download source de
 
 > This repository does **not host any game files**. It only contains metadata and links to external resources.
 
+<p align="center">
+  <a href="https://powerindex-x.github.io/yamata-launcher-links/">
+    <img src="https://img.shields.io/badge/Web Portal%20-GitHub%20Pages-blue?style=for-the-badge">
+  </a>
+</p>
+
 ---
 
 ## Repository Structure

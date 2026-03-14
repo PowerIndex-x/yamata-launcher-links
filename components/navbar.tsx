@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="xl:container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="https://github.com/Gr3gorywolf/Yamata-launcher/blob/master/assets/images/logo.png?raw=true" alt="Yamata Launcher" width={60} height={60} className="object-contain" />
+            <Image src="/images/logo.png" alt="Yamata Launcher" width={60} height={60} className="object-contain" />
             <span className="text-xl font-bold text-foreground">Yamata Launcher Sources</span>
           </Link>
 
