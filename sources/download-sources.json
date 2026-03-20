@@ -40,8 +40,26 @@
    },
     {
     "title":"Edge emu",
-    "description":"Thousands of games with direct download for multiple platforms",
+    "description":"Thousands of games with direct download for multiple platforms with direct download",
     "ref":"https://edgeemu.net/",
     "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/edge-emulation.json"
+   },
+    {
+    "title":"Archive.org",
+    "description":"Archive.org hosted roms with thousands of games for multiple platforms with direct download",
+    "ref":"https://archive.org/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/archive-org.json"
+   },
+   {
+    "title":"The Vault",
+    "description":"Sunset shimmer hosted roms with thousands of games for multiple platforms with direct download",
+    "ref":"https://vault.sunsetshimmer.xyz/public/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/the-vault.json"
+   },
+    {
+    "title":"LoLRoms",
+    "description":"thousands of games for multiple platforms with direct download",
+    "ref":"https://lolroms.com/",
+    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/lolroms.json"
    }
 ]
