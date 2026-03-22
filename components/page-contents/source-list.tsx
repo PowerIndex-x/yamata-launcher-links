@@ -3,6 +3,8 @@ import { useState, useMemo } from "react"
 import { SourceCard } from "../source-card"
 import { SourceSearch } from "../source-search"
 import { Source } from "@/types/source"
+import { TAGS } from "@/lib/constants"
+import { ITag, TagType } from "@/types/tag"
 
 interface SourceListProps {
   title: string,
@@ -26,6 +28,11 @@ export function SourceList({ title, description, sources, isThirdParty, searchPl
     )
   }, [searchQuery, sources])
 
+
+  const parseTags = (tags?: string[]) => {
+    if (!tags) return []
+    return tags.map((tag, index) => TAGS.find((t) => t.id === tag) || { id: `unknown-${index}`, text: tag, type: TagType.Info } as ITag)
+  }
 
 
 
@@ -57,6 +64,7 @@ export function SourceList({ title, description, sources, isThirdParty, searchPl
             gamesCount={source.gamesCount}
             link={source.url}
             refUrl={source.ref}
+            tags={parseTags(source.tags)}
             imageUrl={source.image}
             detailsUrl={isThirdParty ? undefined : `/sources/${source.type.toLowerCase()}/${btoa(source.url)}`}
           />

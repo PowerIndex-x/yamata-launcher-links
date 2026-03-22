@@ -9,7 +9,7 @@ const OUTPUT_DIR = path.join(process.cwd(), "compiled-sources");
 const OUTPUT_CACHES_DIR = path.join(OUTPUT_DIR, "caches");
 const CATALOG_PATH = path.join(INPUT_DIR, "catalog-sources.json");
 const DOWNLOAD_PATH = path.join(INPUT_DIR, "download-sources.json");
-export async function fetchWithRetry(url: string, retries = 3, timeout = 10000) {
+export async function fetchWithRetry(url: string, retries = 5, timeout = 10000) {
   let lastError
 
   for (let i = 0; i < retries; i++) {

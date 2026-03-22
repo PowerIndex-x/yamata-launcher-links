@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Copy, Check, Eye, ExternalLink } from "lucide-react";
 import { formatNumber } from "@/lib/utils";
 import { PlatformChips } from "./platform-chips";
+import { ITag } from "@/types/tag";
 
 interface SourceCardProps {
   title: string;
@@ -15,13 +16,14 @@ interface SourceCardProps {
   gamesCount?: number;
   link: string;
   platforms?: string[];
+  tags?:ITag[];
   detailsUrl?: string;
   isThirdParty?: boolean;
   refUrl?: string;
   imageUrl?: string;
 }
 
-export function SourceCard({ title, description, link, platforms, detailsUrl, isThirdParty, gamesCount, refUrl, imageUrl }: SourceCardProps) {
+export function SourceCard({ title, description, link, platforms, detailsUrl, isThirdParty, gamesCount, refUrl, imageUrl, tags }: SourceCardProps) {
   console.log("Rendering SourceCard with link:", isThirdParty, link);
   const [copied, setCopied] = useState(false);
 
@@ -43,6 +45,15 @@ export function SourceCard({ title, description, link, platforms, detailsUrl, is
         {imageUrl && <img src={imageUrl} alt={title} className="w-full h-30 object-contain mb-4" />}
         <CardTitle className="text-foreground group-hover:text-primary transition-colors">{title}</CardTitle>
         <CardDescription className="text-muted-foreground">
+        {tags && tags.length > 0 && (
+          <div className="flex flex-row gap-1 my-2">
+            {tags.map((tag) => (
+              <Badge key={tag.id} variant={tag.type} className="opacity-75">
+                {tag.text}
+              </Badge>
+            ))}
+          </div>
+        )}
           {description}
           {refUrl && (
             <div className="mt-2 ">
@@ -86,7 +97,7 @@ export function SourceCard({ title, description, link, platforms, detailsUrl, is
           <Button asChild variant="outline" size="sm" className="gap-2">
             <Link href={detailsUrl}>
               <Eye className="h-4 w-4" />
-              View
+              Details
             </Link>
           </Button>
         )}

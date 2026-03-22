@@ -1,65 +1,122 @@
 [
    {
-    "title":"1337x - Switch",
-    "description":"1337x switch games torrents",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/1337x.json"
+      "title": "Archive.org",
+      "description": "Archive.org hosted roms with thousands of games for multiple platforms with direct download",
+      "ref": "https://archive.org/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/archive-org.json",
+      "tags": [
+         "verified",
+         "direct-download"
+      ]
    },
    {
-    "title":"Blueroms - Switch",
-    "description":"Bluerom's switch games collection",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/blueroms.json"
-   },
-    {
-    "title":"Myrient",
-    "description":"Erista hosted roms with thousands of games for multiple platforms",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/myrient.json"
-   },
-    {
-    "title":"TopRoms Collection",
-    "ref":"https://github.com/cdahmedeh/TopRoms",
-    "description":"TopRoms torrent rom collection",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/toproms.json"
-   },
-      {
-    "title":"Romslab",
-    "description":"Romslab switch games collection",
-    "ref":"https://romslab.com/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/romslab.json"
+      "title": "Archive.org - Private Collections",
+      "description": "Archive.org hosted private roms collections with thousands of games for multiple platforms with direct download, Note: this source acts as a complement of the main archive.org source and may contain games that are not present in the main source, but it requires authentication to access the download links",
+      "ref": "https://archive.org/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/archive-org-privates.json",
+      "tags": [
+         "verified",
+         "needs-auth",
+         "direct-download"
+      ]
    },
    {
-    "title":"NswGame",
-    "description":"Nswgame switch games collection",
-    "ref":"https://nswgame.com/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/nswgame-com.json"
+      "title": "Edge emu",
+      "description": "Thousands of games with direct download for multiple platforms with direct download",
+      "ref": "https://edgeemu.net/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/edge-emulation.json",
+      "tags": [
+         "verified",
+         "direct-download"
+      ]
    },
    {
-    "title":"Romspedia",
-    "description":"Thousands of games with direct download for multiple platforms",
-    "ref":"https://romspedia.com/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/romspedia.json"
-   },
-    {
-    "title":"Edge emu",
-    "description":"Thousands of games with direct download for multiple platforms with direct download",
-    "ref":"https://edgeemu.net/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/edge-emulation.json"
-   },
-    {
-    "title":"Archive.org",
-    "description":"Archive.org hosted roms with thousands of games for multiple platforms with direct download",
-    "ref":"https://archive.org/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/archive-org.json"
+      "title": "The Vault",
+      "description": "Sunset shimmer hosted roms with thousands of games for multiple platforms with direct download",
+      "ref": "https://vault.sunsetshimmer.xyz/public/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/the-vault.json",
+      "tags": [
+         "verified",
+         "direct-download"
+      ]
    },
    {
-    "title":"The Vault",
-    "description":"Sunset shimmer hosted roms with thousands of games for multiple platforms with direct download",
-    "ref":"https://vault.sunsetshimmer.xyz/public/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/the-vault.json"
+      "title": "LoLRoms",
+      "description": "thousands of games for multiple platforms with direct download",
+      "ref": "https://lolroms.com/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/lolroms.json",
+      "tags": [
+         "verified",
+         "direct-download"
+      ]
    },
-    {
-    "title":"LoLRoms",
-    "description":"thousands of games for multiple platforms with direct download",
-    "ref":"https://lolroms.com/",
-    "url":"https://lucent-toffee-6b6d8f.netlify.app/downloads/lolroms.json"
+   {
+      "title": "Romspedia",
+      "description": "Thousands of games with direct download for multiple platforms",
+      "ref": "https://romspedia.com/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/romspedia.json",
+       "tags": [
+         "verified",
+         "direct-download"
+      ]
+   },
+   {
+      "title": "Blueroms - Switch",
+      "description": "Bluerom's switch games collection",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/blueroms.json",
+      "tags": [
+         "trusted",
+         "torrent"
+      ]
+   },
+   {
+      "title": "TopRoms Collection",
+      "ref": "https://github.com/cdahmedeh/TopRoms",
+      "description": "TopRoms torrent rom collection",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/toproms.json",
+      "tags": [
+         "trusted",
+         "torrent"
+      ]
+   },
+   {
+      "title": "Romslab",
+      "description": "Romslab switch games collection",
+      "ref": "https://romslab.com/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/romslab.json",
+      "tags": [
+         "trusted",
+         "direct-download",
+         "captcha-hosters"
+      ]
+   },
+   {
+      "title": "NswGame",
+      "description": "Nswgame switch games collection",
+      "ref": "https://nswgame.com/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/nswgame-com.json",
+      "tags": [
+         "trusted",
+         "direct-download",
+         "captcha-hosters"
+      ]
+   }, 
+   {
+      "title": "1337x - Switch",
+      "description": "1337x switch games torrents",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/1337x.json",
+      "tags": [
+         "use-at-your-own-risk",
+         "torrent"
+      ]
+   },
+   {
+      "title": "Myrient",
+      "description": "Erista hosted roms with thousands of games for multiple platforms Will be closed on April 2026",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/myrient.json",
+      "tags": [
+         "deprecated",
+         "direct-download"
+      ]
    }
 ]

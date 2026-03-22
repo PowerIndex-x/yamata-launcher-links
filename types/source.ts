@@ -13,4 +13,5 @@ export interface Source{
     platforms?: string[],
     url: string
     isCached?: boolean
+    tags?: string[]
 }
