@@ -51,6 +51,16 @@
       ]
    },
    {
+      "title": "NoPayStation",
+      "description": "PS3, PSVita, and PSP games on pkg format with direct download",
+      "ref": "https://nopaystation.com/",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/nopaystation-com.json",
+      "tags": [
+         "verified",
+         "direct-download"
+      ]
+   },
+   {
       "title": "Romspedia",
       "description": "Thousands of games with direct download for multiple platforms",
       "ref": "https://romspedia.com/",
