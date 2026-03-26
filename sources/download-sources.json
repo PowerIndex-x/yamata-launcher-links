@@ -65,15 +65,26 @@
       "description": "Thousands of games with direct download for multiple platforms",
       "ref": "https://romspedia.com/",
       "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/romspedia.json",
-       "tags": [
+      "tags": [
          "verified",
          "direct-download"
       ]
    },
    {
-      "title": "Blueroms - Switch",
-      "description": "Bluerom's switch games collection",
+      "title": "Blueroms",
+      "description": "Bluerom's games collection for multiple platforms with torrent download",
+      "ref": "https://blueroms.ws/",
       "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/blueroms.json",
+      "tags": [
+         "trusted",
+         "torrent"
+      ]
+   },
+    {
+      "title": "RuTracker",
+      "ref": "https://rutracker.org/",
+      "description": "RuTracker torrent rom collection",
+      "url": "https://lucent-toffee-6b6d8f.netlify.app/downloads/rutracker.json",
       "tags": [
          "trusted",
          "torrent"
