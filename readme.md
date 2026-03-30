@@ -9,8 +9,12 @@ Its purpose is to centralize and share **game catalog** and **download source de
 
 <p align="center">
   <a href="https://powerindex-x.github.io/yamata-launcher-links/">
-    <img src="https://img.shields.io/badge/Web Portal%20-GitHub%20Pages-blue?style=for-the-badge">
+    <img src="https://img.shields.io/badge/🌐%20Open%20Web%20Portal-Click%20Here-blue?style=for-the-badge">
   </a>
+</p>
+
+<p align="center">
+  <b>Explore all available sources</b>
 </p>
 
 ---
